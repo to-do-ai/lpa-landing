@@ -2,13 +2,13 @@
 const nextConfig = {
   // Allow image domains
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
         hostname: '**',
       },
     ],
-    unoptimized: true,
   },
   // Temporarily disable TypeScript and ESLint checking during build
   typescript: {
@@ -19,10 +19,22 @@ const nextConfig = {
     // This will allow production builds to complete even with ESLint errors
     ignoreDuringBuilds: true,
   },
-  // Enable static HTML export for hosting on CDN/static hosting
+  // Configure static export
   output: 'export',
-  // Add this to ensure images with "fill" work properly in export mode
-  distDir: 'out',
+  // Remove distDir as it may be causing conflicts
+  // distDir: 'out', // Next.js handles this automatically with output: 'export'
+  
+  // Disable server components features incompatible with static export
+  experimental: {
+    // Ensure no server-only features are used
+    serverActions: false,
+  },
+  // Prevent environment variable errors
+  env: {
+    // Add any required env variables with defaults here
+  },
+  // Ensure all pages are pre-rendered
+  trailingSlash: true,
 };
 
 module.exports = nextConfig; 

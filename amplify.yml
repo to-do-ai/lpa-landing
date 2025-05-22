@@ -6,11 +6,14 @@ frontend:
         - npm ci
     build:
       commands:
+        - echo "Building Next.js static export..."
         - npm run build
+        - echo "Build completed."
   artifacts:
     baseDirectory: out
     files:
       - '**/*'
   cache:
     paths:
-      - node_modules/**/* 
+      - node_modules/**/*
+      - .next/cache/**/* 
