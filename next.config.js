@@ -21,6 +21,8 @@ const nextConfig = {
   },
   // Enable static HTML export for hosting on CDN/static hosting
   output: 'export',
+  // Add this to ensure images with "fill" work properly in export mode
+  distDir: 'out',
 };
 
 module.exports = nextConfig; 
