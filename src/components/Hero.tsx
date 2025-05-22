@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 interface HeroProps {
@@ -24,7 +23,7 @@ export default function Hero({ onTryClick }: HeroProps) {
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10">
               AI-powered lead processing that keeps your leads hot and qualified
-              until they're ready to close.
+              until they&apos;re ready to close.
             </p>
             <div className="flex flex-col md:flex-row justify-center gap-4">
               <button 

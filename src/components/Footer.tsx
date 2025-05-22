@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-1">
             <h3 className="text-xl font-bold text-white mb-4">LPAgents</h3>
             <p className="text-gray-400 mb-4">
-              AI-powered lead processing that keeps your leads hot and qualified until they're ready to close.
+              AI-powered lead processing that keeps your leads hot and qualified until they&apos;re ready to close.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white">

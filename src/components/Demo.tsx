@@ -39,6 +39,7 @@ export default function Demo({ isOpen, onClose, onSubmit, formSubmitted }: DemoP
       setShowProcessingSteps(false);
       setCurrentStage(0);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [formSubmitted]);
 
   const handleSubmit = (e: React.FormEvent) => {
