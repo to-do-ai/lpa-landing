@@ -50,6 +50,7 @@ export default function Team() {
                   fill
                   className="object-cover"
                   priority={index < 2}
+                  unoptimized
                 />
               </div>
               <div className="p-6">
